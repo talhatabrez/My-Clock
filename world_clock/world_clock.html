@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <h2>World Clock</h2>
+        <div class="main-holder">
+            <div>
+                <span></span>
+                <span id="gmt-time"></span>
+            </div>
+            <div>
+                <span id="zone-heading">CET: </span>
+                <span id="cet-time"></span>
+            </div>
+            <div>
+                <span id="zone-heading">EST: </span>
+                <span id="est-time"></span>
+            </div>
+            <button id='home-btn'onclick="location.href = '../index.html'">Home</button>
+        </div>
+    </div>
+    <script src="world_clock.js"></script>
+</body>
+</html>

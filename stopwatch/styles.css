@@ -1,0 +1,54 @@
+* {
+    font-family: fantasy;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: rgb(231, 180, 103);
+}
+
+.digit{
+    font-size: 150px;
+}
+
+.text{
+    font-size: 30px;
+    color: rgb(113, 50, 50);
+}
+
+.btn{
+    width: 100px;
+    padding: 10px 15px;
+    margin: 0px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgb(239, 239, 239);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+#count{
+    font-size: 1px;
+    color: black;
+}
+#start{
+    color: green;
+}
+
+#end{
+    color: red;
+}
+
+#reset{
+    color: rgb(133, 133, 245);
+}
+
+

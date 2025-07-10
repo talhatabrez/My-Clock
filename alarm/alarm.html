@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set an Alarm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="alarm-bx">
+        <h2>Set an alarm at?</h2>
+        <div class="alarm-bx-inner">
+            <input type="number" placeholder="Hour(s)" id="alarm-hour">
+            <input type="number" placeholder="Minute(s)" id="alarm-minute">
+        </div>
+        <audio src="../assets/nokia_n97_alarm.mp3" id="alarm-sound"></audio>
+        <div class="buttons">
+            <button class='btn' id="save-alarm">Save</button>
+            <button class='btn' id="cancel-alarm">Cancel</button>
+            <button class="btn" id="home-btn" onclick="location.href='../index.html'">Home</button>
+        </div>
+    </div>
+    <script src="alarm.js"></script>
+</body>
+</html>

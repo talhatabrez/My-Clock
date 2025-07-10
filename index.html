@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="clock">Time shows here</div>
+    <div id="calendar">Date shows here</div>
+    <div id="feature-btn">
+        <button class="feature" onclick="location.href = 'stopwatch/stop_watch.html'">Stopwatch</button>
+        <button class="feature" onclick="location.href = 'timer/timer.html'">Timer</button>
+        <button class="feature" onclick="location.href = 'alarm/alarm.html'">Alarm</button>
+        <button class="feature" onclick="location.href = 'world_clock/world_clock.html'">World Clock</button>
+        <img id="darkMode" src="assets/mode_change.png" style="cursor: pointer;">
+    </div>
+    <script>
+        function showTime() {
+            let time = new Date();
+            let hour = time.getHours();
+            let mins = time.getMinutes();
+            let secs = time.getSeconds();
+
+            meridian = 'AM';
+
+            if (hour >= 12) {
+                if (hour > 12) hour -= 12;
+                meridian = 'PM';
+            } else if (hour == 0) {
+                hr = 12;
+                meridian = 'AM';
+            }
+
+            hour = (hour < 10) ? '0' + hour : hour;
+            mins = (mins < 10) ? '0' + mins : mins;
+            secs = (secs < 10) ? '0' + secs : secs;
+
+            let currentTime = hour + ":" + mins + ":" + secs + " " + meridian;
+
+            document.getElementById("clock").innerHTML = currentTime;
+        }
+
+        function showDate() {
+            let time = new Date();
+
+            let date = time.getDate();
+            let month = time.getMonth() + 1;
+            let year = time.getFullYear();
+
+            let today = date + "/" + month + "/" + year;
+
+            document.getElementById("calendar").innerHTML = today;
+        }
+
+        function toggleMode() {
+            const toggleBtn = document.getElementById('darkMode');
+            if (!toggleBtn) {
+                console.error("darkMode image not found!");
+                return;
+            }
+            toggleBtn.addEventListener('click', function () {
+                console.log('img clicked')
+                document.body.classList.toggle('dark-mode');
+                if (document.body.classList.contains('dark-mode')) {
+                    document.body.classList.remove('light-mode');
+                } else {
+                    document.body.classList.add('light-mode');
+                }
+            });
+        }
+
+        window.onload = function () {
+            showTime();
+            setInterval(showTime, 1000);
+            showDate();
+            toggleMode();
+        }
+    </script>
+</body>
+
+</html>
