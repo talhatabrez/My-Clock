@@ -1,3 +1,5 @@
+Day 2 of me revising the topics
+
 Hey, I created this simple-yet-useful clock application, where it has:
 - Stop Watch
 - Timer
