@@ -1,4 +1,4 @@
-Day 2 of me revising the topics
+#Day 2
 
 Hey, I created this simple-yet-useful clock application, where it has:
 - Stop Watch
